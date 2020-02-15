@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qWM-pi-KEq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--計算機アプリ-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRe-Fr-7Eh">
+                                <rect key="frame" x="30" y="424" width="354" height="48"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="計算">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapCaluculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bwi-18-ihy"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HBU-N4-Pjr">
+                                <rect key="frame" x="30" y="363" width="354" height="32"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="足し算"/>
+                                    <segment title="引き算"/>
+                                    <segment title="掛け算"/>
+                                    <segment title="割り算"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FXi-F0-Z87">
+                                <rect key="frame" x="30" y="235" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UiM-km-zRc">
+                                <rect key="frame" x="30" y="299" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果は・・・" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNM-Zg-2XT">
+                                <rect key="frame" x="30" y="169" width="354" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UiM-km-zRc" secondAttribute="trailing" constant="30" id="0SD-PV-7Gr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yNM-Zg-2XT" secondAttribute="trailing" constant="30" id="6BH-pL-oDq"/>
+                            <constraint firstItem="UiM-km-zRc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6Hu-gk-Wzj"/>
+                            <constraint firstItem="xRe-Fr-7Eh" firstAttribute="top" secondItem="HBU-N4-Pjr" secondAttribute="bottom" constant="30" id="80Y-2P-zaQ"/>
+                            <constraint firstItem="HBU-N4-Pjr" firstAttribute="top" secondItem="UiM-km-zRc" secondAttribute="bottom" constant="30" id="BnO-NU-TXv"/>
+                            <constraint firstItem="HBU-N4-Pjr" firstAttribute="top" secondItem="UiM-km-zRc" secondAttribute="bottom" constant="30" id="Cis-Kp-2Yc"/>
+                            <constraint firstItem="xRe-Fr-7Eh" firstAttribute="top" secondItem="HBU-N4-Pjr" secondAttribute="bottom" constant="30" id="EWW-59-8Xd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UiM-km-zRc" secondAttribute="trailing" constant="30" id="FPE-4S-1F0"/>
+                            <constraint firstItem="HBU-N4-Pjr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="IS7-2b-J7K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HBU-N4-Pjr" secondAttribute="trailing" constant="30" id="KJP-tf-rbL"/>
+                            <constraint firstItem="xRe-Fr-7Eh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="PRm-En-hlg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xRe-Fr-7Eh" secondAttribute="trailing" constant="30" id="UWo-Uh-TEK"/>
+                            <constraint firstItem="FXi-F0-Z87" firstAttribute="top" secondItem="yNM-Zg-2XT" secondAttribute="bottom" constant="30" id="VeP-Vt-BeF"/>
+                            <constraint firstItem="xRe-Fr-7Eh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Y3I-79-NjF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FXi-F0-Z87" secondAttribute="trailing" constant="30" id="YuZ-y2-u6D"/>
+                            <constraint firstItem="xRe-Fr-7Eh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kV3-K4-yui"/>
+                            <constraint firstItem="UiM-km-zRc" firstAttribute="top" secondItem="FXi-F0-Z87" secondAttribute="bottom" constant="30" id="wVT-AL-2uX"/>
+                            <constraint firstItem="FXi-F0-Z87" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xag-G8-Td6"/>
+                            <constraint firstItem="yNM-Zg-2XT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ynV-yV-5Lc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="計算機アプリ" id="mRL-xS-kZp"/>
+                    <connections>
+                        <outlet property="firstTextField" destination="FXi-F0-Z87" id="7Y8-gf-kNn"/>
+                        <outlet property="resultLabel" destination="yNM-Zg-2XT" id="ffg-xe-nbv"/>
+                        <outlet property="secondTextField" destination="UiM-km-zRc" id="SI1-yV-6ci"/>
+                        <outlet property="segmentedControl" destination="HBU-N4-Pjr" id="uVj-Py-5YZ"/>
+                        <segue destination="Cxx-l9-ziT" kind="show" identifier="ResultSegue" id="RM2-SF-a4p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="pxq-qp-b7a">
+            <objects>
+                <viewController id="Cxx-l9-ziT" customClass="ResultViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nCz-1j-P7k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果は…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUm-e0-5bb">
+                                <rect key="frame" x="96.5" y="412" width="221.5" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aUm-e0-5bb" firstAttribute="centerY" secondItem="nCz-1j-P7k" secondAttribute="centerY" id="2iU-CX-mSj"/>
+                            <constraint firstItem="aUm-e0-5bb" firstAttribute="centerX" secondItem="nCz-1j-P7k" secondAttribute="centerX" id="LdQ-ie-Oxc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="alQ-2o-SDn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8yT-Ir-faH"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="aUm-e0-5bb" id="ENd-Tk-cm7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNV-5x-Smo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871" y="114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dyg-Rl-2LA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qWM-pi-KEq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tiG-xN-L7u">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bPu-kr-VFe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cc9-GX-UIK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>
